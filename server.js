@@ -9,7 +9,7 @@ app.use(express.static("public"));
 app.get("/", (req, resp) => {
   resp.sendFile(__dirname + "/index.html");
 });
-let port = listen(process.env.PORT || 5000);
+let port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`app is working on port :: %d`, port);
 });
